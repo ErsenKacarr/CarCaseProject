@@ -1,5 +1,6 @@
 ﻿using CarCaseProject.Context;
 using CarCaseProject.Entities;
+using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace CarCaseProject.Controllers
         }
 
 
-        [HttpGet]     
+        [HttpGet]
         public ActionResult CreateCar()
         {
 
@@ -34,7 +35,7 @@ namespace CarCaseProject.Controllers
             return RedirectToAction("Index");
         }
 
-     
+
         public ActionResult DeleteCar(int id)
         {
             var value = context.Cars.Find(id);
@@ -43,7 +44,7 @@ namespace CarCaseProject.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet]      
+        [HttpGet]
         public ActionResult UpdateCar(int id)
         {
             var value = context.Cars.Find(id);
@@ -59,7 +60,7 @@ namespace CarCaseProject.Controllers
             value.ActiveWorkingTime = car.ActiveWorkingTime;
             value.MaintenanceTime = car.MaintenanceTime;
             value.IdleTime = car.IdleTime;
-            value.TotalTime = car.TotalTime;
+            value.TotalTime = car.TotalTime;          
             context.SaveChanges();
             return RedirectToAction("Index");
         }
