@@ -1,0 +1,72 @@
+﻿@model CarCaseProject.Entities.Car
+
+@{
+    Layout = null;
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="page-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Kullanıcı Araç Güncelleme Sayfası</h5>
+                        <span>Araç Güncelleme ile ilgili verileri eksiksiz olarak doldurunuz!</span>
+                    </div>
+                    <div class="card-block">
+                        <form method="post">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Araç ID</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="CarID"  class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Araç Adı</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="CarName"  class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Araç Plakası</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="LicensePlate" class ="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Aktif Çalışma Süresi</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="ActiveWorkingTime"  class="form-control">
+                                </div>
+                            </div>
+                            <br />
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Bakım Süresi</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="MaintenanceTime" class="form-control">
+                                </div>
+                            </div>
+                            <br />
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Boşta Bekleme Süresi</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="IdleTime" class="form-control">
+                                </div>
+                            </div>
+                            <br />
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Hafta Süresi</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="IdleTime" class="form-control">
+                                </div>
+                            </div>
+                            <button class="btn btn-primary">Aracı Güncelle</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
