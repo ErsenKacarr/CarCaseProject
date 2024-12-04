@@ -9,6 +9,7 @@ using System.Web.Security;
 
 namespace CarCaseProject.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         CaseContext context = new CaseContext();
@@ -20,14 +21,14 @@ namespace CarCaseProject.Controllers
         }
 
         [HttpPost]
-        public ActionResult AdminLogin(Admin admin)
+        public ActionResult Index(Admin admin)
         {
             var result = context.Admins.FirstOrDefault(x => x.Username == admin.Username && x.Password == admin.Password);
             if (result != null)
             {
                 FormsAuthentication.SetAuthCookie(admin.Username, true);
                 Session["username"] = result.Username;
-                return RedirectToAction("CarList", "Car");
+                return RedirectToAction("Index", "Car");
             }
             return View();
         }
