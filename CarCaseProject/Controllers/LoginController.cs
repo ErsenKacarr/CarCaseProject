@@ -28,7 +28,7 @@ namespace CarCaseProject.Controllers
             {
                 FormsAuthentication.SetAuthCookie(admin.Username, true);
                 Session["username"] = result.Username;
-                return RedirectToAction("Index", "Car");
+                return RedirectToAction("CarList", "AdminCar");
             }
             return View();
         }
